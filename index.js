@@ -10,7 +10,7 @@ var TradeSatoshi = function TradeSatoshi(key, secret, server, timeout)
     this.key = key;
     this.secret = secret;
 
-    this.server = server || 'https://www.tradesatoshi.com';
+    this.server = server || 'https://tradesatoshi.com';
 
     this.timeout = timeout || 30000;
 };
@@ -91,8 +91,8 @@ TradeSatoshi.prototype.publicRequest = function(method, params, callback)
 
     var headers = {"User-Agent": "TradeSatoshi Javascript API Client"};
 
-    var path = '/data/' + method;
-
+    var path = '/api/public/' + method;
+    console.log(this.server + path)
     var options = {
         url: this.server + path,
         method: 'GET',
@@ -164,26 +164,30 @@ function constructParamArray(args, maxArgs)
 // Public Functions
 //
 
+TradeSatoshi.prototype.getcurrencies = function getTrades(callback)
+{
+    this.publicRequest('getcurrencies', {}, callback);
+};
+
 TradeSatoshi.prototype.getTicker = function getTicker(callback, market)
 {
-    this.publicRequest('ticker', {market: market}, callback);
+    this.publicRequest('getticker', {market: market}, callback);
 };
 
 TradeSatoshi.prototype.getOrderBook = function getOrderBook(callback, market)
 {
-    this.publicRequest('orderbook', {market: market}, callback);
+    this.publicRequest('getorderbook', {market: market}, callback);
 };
 
-TradeSatoshi.prototype.getHistoryData = function getHistoryData(callback, params)
+TradeSatoshi.prototype.GetMarketHistory = function GetMarketHistory(callback, market)
 {
-    this.publicRequest('historydata', params, callback);
+    this.publicRequest('getmarkethistory', {market: market}, callback);
 };
 
-TradeSatoshi.prototype.getTrades = function getTrades(callback)
+TradeSatoshi.prototype.GetMarketSummary = function GetMarketSummary(callback, market)
 {
-    this.publicRequest('trades', {}, callback);
+    this.publicRequest('getmarketsummary', {market: market}, callback);
 };
-
 //
 // Private Functions
 //
