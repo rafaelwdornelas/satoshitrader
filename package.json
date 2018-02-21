@@ -1,14 +1,14 @@
 {
     "name": "tradesatoshi",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Node.js API Wrapper Compatible with TradeSatoshi CryptoCurrency Exchange",
     "main": "index.js",
     "dependencies": {
-        "request": "~2.51.0",
-        "underscore": "~1.7.0",
-        "crypto": "~0.0.3",
-        "verror": "~1.6.0",
-        "microtime": "~1.2.0"
+        "crypto": "^1.0.1",
+        "microtime": "^2.1.7",
+        "request": "^2.83.0",
+        "underscore": "^1.8.3",
+        "verror": "^1.10.0"
     },
     "keywords": [
         "TradeSatoshi",
