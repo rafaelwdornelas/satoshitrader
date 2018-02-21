@@ -6,9 +6,9 @@ var since1Minute = new Date().getTime() / 1000 -  60, // convert to seconds then
 // Test public data APIs
 var publicClient = new TradeSatoshi();
 
-// publicClient.getTicker(console.log, 'BTCCNY');
+// publicClient.getTicker(console.log, 'BTC_CNY');
 
-// publicClient.getOrderBook(console.log, 'BTCCNY');
+// publicClient.getOrderBook(console.log, 'BTC_CNY');
 
 // publicClient.getTrades(console.log);
 
@@ -39,23 +39,23 @@ var privateClient = new TradeSatoshi(key, secret);
 // privateClient.getAccountInfo(console.log, 'loan');
 // privateClient.getAccountInfo(console.log, 'balance');
 
-// privateClient.buyOrder2(console.log, 1000, 0.001, 'BTCCNY');
+// privateClient.buyOrder2(console.log, 1000, 0.001, 'BTC_CNY');
 // privateClient.sellOrder2(console.log, 9000, 0.0001);
-// privateClient.createOrder2(console.log, 'buy', 999, 0.0001, 'BTCCNY');
-// privateClient.createOrder2(console.log, 'sell', 8888, 0.0002, 'BTCCNY');
+// privateClient.createOrder2(console.log, 'buy', 999, 0.0001, 'BTC_CNY');
+// privateClient.createOrder2(console.log, 'sell', 8888, 0.0002, 'BTC_CNY');
 // market order
-// privateClient.createOrder2(console.log, 'buy', null, 0.0001, 'BTCCNY');
+// privateClient.createOrder2(console.log, 'buy', null, 0.0001, 'BTC_CNY');
 
 // privateClient.cancelOrder(console.log, 1);
 
 // privateClient.getOrders(console.log);
 // privateClient.getOrders(console.log, false);
-// privateClient.getOrders(console.log, false, 'BTCCNY', 2, 0, since1Day, true);
-// privateClient.getOrders(console.log, false, 'BTCCNY', 2, 0, since1Day, true);
+// privateClient.getOrders(console.log, false, 'BTC_CNY', 2, 0, since1Day, true);
+// privateClient.getOrders(console.log, false, 'BTC_CNY', 2, 0, since1Day, true);
 
 // privateClient.getOrder(console.log, "75479188");
 // privateClient.getOrder(console.log, 1);
-// privateClient.getOrder(console.log, 1, 'BTCCNY', true);
+// privateClient.getOrder(console.log, 1, 'BTC_CNY', true);
 
 // privateClient.getTransactions(console.log);
 // privateClient.getTransactions(console.log, 'all', 10);
