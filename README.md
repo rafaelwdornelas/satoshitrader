@@ -12,4 +12,4 @@ Please contact [@TradeSatoshi](https://twitter.com/TradeSatoshi) if you are havi
 `npm install tradesatoshi
 
 ### Examples
-Please see the exmaples.js file
+Please see the examples.js file
